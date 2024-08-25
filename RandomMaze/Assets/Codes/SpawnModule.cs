@@ -59,7 +59,7 @@ public class SpawnModule : MonoBehaviour
     {
         int index = Random.Range(0, 4);
         Vector3 spawnPosition = new Vector3(x, y, 0);
-        Instantiate(modules[index], spawnPosition, transform.rotation);
+        GameManager.Instance.modules[x, y] = Instantiate(modules[index], spawnPosition, transform.rotation);
     }
 }
 
