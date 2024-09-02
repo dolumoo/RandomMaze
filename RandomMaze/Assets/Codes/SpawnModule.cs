@@ -8,6 +8,7 @@ public class SpawnModule : MonoBehaviour
 {
     public GameObject[] modules;
     public int mapScale, szoneScale;
+    public float[] rotPreset = {0f, 90f, 180f, 270f};
 
 
 
@@ -58,8 +59,9 @@ public class SpawnModule : MonoBehaviour
     public void SpawnObject(int x, int y)
     {
         int index = Random.Range(0, 4);
+        int rotIndex = Random.Range(0, 4);
         Vector3 spawnPosition = new Vector3(x, y, 0);
-        GameManager.Instance.modules[x, y] = Instantiate(modules[index], spawnPosition, transform.rotation);
+        GameManager.Instance.modules[x, y] = Instantiate(modules[index], spawnPosition, Quaternion.Euler(0, 0, rotPreset[rotIndex]));
     }
 }
 
