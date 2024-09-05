@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public static GameManager Instance;
 
-    public int mapScale = 17;
+    public int mapScale = 11;
     public int szoneScale = 3;
-    public GameObject[,] modules = new GameObject[17,17];
+    public GameObject[,] modules = new GameObject[11,11];
     public int goalX, goalY;
 
 
@@ -25,16 +25,16 @@ public class GameManager : MonoBehaviour
         switch (pos)
         {
             case 0:
-                goalX = 0; goalY = Random.Range(0, 17);
+                goalX = 0; goalY = Random.Range(0, 11);
                 break;
             case 1:
-                goalY = 0; goalX = Random.Range(0, 17);
+                goalY = 0; goalX = Random.Range(0, 11);
                 break;
             case 2:
-                goalX = 16; goalY = Random.Range(0, 17);
+                goalX = 10; goalY = Random.Range(0, 11);
                 break;
             case 3:
-                goalY = 16; goalX = Random.Range(0, 17);
+                goalY = 10; goalX = Random.Range(0, 11);
                 break;
         }
 
@@ -44,20 +44,26 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        SpawnModule.SpawnMaze();
-        MazeSolver.ValidMaze();
+        StartCoroutine(GenerateMaze());
+    }
 
-
-
-
-        /*
-        while(true)
+    IEnumerator GenerateMaze()
+    {
+        while (true)
         {
             SpawnModule.SpawnMaze();
-            if(MazeSolver.ValidMaze()) { break; }
-            else { SpawnModule.DestroyMaze(); }
+            yield return null;
+
+            if (MazeSolver.ValidMaze())
+            {
+                break;
+            }
+            else
+            {
+                SpawnModule.DestroyMaze();
+                yield return null;
+            }
         }
-        */
     }
 }
     
