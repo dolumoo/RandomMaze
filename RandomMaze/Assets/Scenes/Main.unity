@@ -279,7 +279,7 @@ MonoBehaviour:
   - {fileID: 6874021456248388885, guid: ec690fa6c9237574c8d40c9a52ef86ff, type: 3}
   - {fileID: 6874021456248388885, guid: cbe50d32bb95b5149ae2cd6b13edf58f, type: 3}
   - {fileID: 6874021456248388885, guid: f06dbe4e5de914e4e82c034b879b0cdb, type: 3}
-  parentObject: {fileID: 2013426993}
+  parentObject: {fileID: 2013426994}
   mapScale: 0
   szoneScale: 0
   rotPreset:
@@ -796,7 +796,7 @@ Transform:
   m_GameObject: {fileID: 2013426993}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9947176, y: 4.3651085, z: -0.07841481}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

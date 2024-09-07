@@ -44,7 +44,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(GenerateMaze());
+        SpawnModule.SpawnMaze();
+        MazeSolver.ValidMaze();
+
+
+        //StartCoroutine(GenerateMaze());
     }
 
     IEnumerator GenerateMaze()
@@ -65,5 +69,11 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public void ChangeClearScene()
+    {
+        SceneManager.LoadScene("Clear");
+    }
+
 }
     

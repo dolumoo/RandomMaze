@@ -1114,8 +1114,8 @@ GameObject:
   - component: {fileID: 7240661447967647111}
   - component: {fileID: 2061403084315554877}
   - component: {fileID: 7153421306114862296}
-  - component: {fileID: 2562365399581287220}
-  - component: {fileID: 1339363496255206759}
+  - component: {fileID: 4484476665567237382}
+  - component: {fileID: 3411812325546886818}
   m_Layer: 0
   m_Name: Module_Blue
   m_TagString: Untagged
@@ -1209,7 +1209,7 @@ MonoBehaviour:
   eDoor: {fileID: 0}
   sDoor: {fileID: 0}
   wDoor: {fileID: 0}
---- !u!50 &2562365399581287220
+--- !u!50 &4484476665567237382
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -1236,7 +1236,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!66 &1339363496255206759
+--- !u!66 &3411812325546886818
 CompositeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

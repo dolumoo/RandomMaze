@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     {
         if (col.CompareTag("Goal"))
         {
+            GameManager.Instance.ChangeClearScene();
             Debug.Log("Goal!");
         }
     }
