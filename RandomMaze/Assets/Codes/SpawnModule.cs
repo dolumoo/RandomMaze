@@ -81,15 +81,19 @@ public class SpawnModule : MonoBehaviour
             }
         }
     }
+    
     public void DestroyMaze()
     {
-        for(int n = 0;n < mapScale; n++)
-        {
-            for(int m = 0; m < mapScale; m++)
+        foreach (Transform child in parentObj.transform)
+            for (int n = 0; n < mapScale; n++)
             {
-                GameObject.Destroy(GameManager.Instance.modules[n,m]);
+                Destroy(child.gameObject);
+                for (int m = 0; m < mapScale; m++)
+                {
+                    GameObject.Destroy(GameManager.Instance.modules[n, m]);
+                }
             }
-        }
     }
+    
 }
 
