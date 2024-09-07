@@ -6,10 +6,9 @@ using UnityEngine;
 
 public class SpawnModule : MonoBehaviour
 {
-    public GameObject[] modules; 
-    public Transform parentObject;
+    public GameObject[] modules;
     public int mapScale, szoneScale;
-    public float[] rotPreset = { 0f, 90f, 180f, 270f };
+    public float[] rotPreset = {0f, 90f, 180f, 270f};
 
     public int goalX, goalY;
 
@@ -17,7 +16,7 @@ public class SpawnModule : MonoBehaviour
     {
 
     }
-
+   
     private void Start()
     {
 
@@ -46,12 +45,11 @@ public class SpawnModule : MonoBehaviour
         int index = Random.Range(0, 4);
         int rotIndex = Random.Range(0, 4);
         Vector3 spawnPosition = new Vector3(x, y, 0);
-        GameManager.Instance.modules[x, y] = Instantiate(modules[index], spawnPosition, Quaternion.Euler(0, 0, rotPreset[rotIndex]), parentObject);
+        GameManager.Instance.modules[x, y] = Instantiate(modules[index], spawnPosition, Quaternion.Euler(0, 0, rotPreset[rotIndex]));
     }
 
     public void SpawnMaze()
     {
-
         mapScale = GameManager.Instance.mapScale;
         szoneScale = GameManager.Instance.szoneScale;
 
@@ -65,14 +63,14 @@ public class SpawnModule : MonoBehaviour
                 if (IsSafezone(n, m))
                 {
                     Vector3 spawnPosition = new Vector3(n, m, 0);
-                    GameManager.Instance.modules[n, m] = Instantiate(modules[4], spawnPosition, Quaternion.identity, parentObject);
+                    GameManager.Instance.modules[n, m] = Instantiate(modules[4], spawnPosition, Quaternion.identity);
                 }
                 else
                 {
                     if (n == goalX && m == goalY)
                     {
                         Vector3 spawnPosition = new Vector3(n, m, 0);
-                        GameManager.Instance.modules[n, m] = Instantiate(modules[5], spawnPosition, Quaternion.identity, parentObject);
+                        GameManager.Instance.modules[n, m] = Instantiate(modules[5], spawnPosition, Quaternion.identity);
                     }
                     else
                     {
@@ -84,9 +82,12 @@ public class SpawnModule : MonoBehaviour
     }
     public void DestroyMaze()
     {
-        foreach(Transform child in parentObject.transform)
+        for(int n = 0;n < mapScale; n++)
         {
-            Destroy(child.gameObject);
+            for(int m = 0; m < mapScale; m++)
+            {
+                GameObject.Destroy(GameManager.Instance.modules[n,m]);
+            }
         }
     }
 }

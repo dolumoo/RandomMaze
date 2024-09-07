@@ -9,7 +9,7 @@ public class MazeSolver : MonoBehaviour
     public int posX, posY;
     public GameObject nModule, sModule, eModule, wModule, myModule;
     public bool nDoorBlocked, eDoorBlocked, sDoorBlocked, wDoorBlocked;
-    private bool[,] visited = new bool[11,11];
+    private bool[,] visited = new bool[17,17];
 
     private void Start()
     {
@@ -24,7 +24,7 @@ public class MazeSolver : MonoBehaviour
 
     public bool ValidMaze()
     {
-        if (SolveMaze(5, 5))
+        if (SolveMaze(8, 8))
         {
             Debug.Log("Answer exist");
             return true;
