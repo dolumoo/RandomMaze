@@ -1022,8 +1022,8 @@ GameObject:
   - component: {fileID: 7240661447967647111}
   - component: {fileID: 2061403084315554877}
   - component: {fileID: 3729117197156338225}
-  - component: {fileID: 2026383546093243055}
-  - component: {fileID: 2674647384689837452}
+  - component: {fileID: 7651229376739344876}
+  - component: {fileID: 4100659821364527261}
   m_Layer: 0
   m_Name: Module_Yellow
   m_TagString: Untagged
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   eDoor: {fileID: 0}
   sDoor: {fileID: 0}
   wDoor: {fileID: 0}
---- !u!50 &2026383546093243055
+--- !u!50 &7651229376739344876
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -1144,7 +1144,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!66 &2674647384689837452
+--- !u!66 &4100659821364527261
 CompositeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1191,16 +1191,16 @@ CompositeCollider2D:
         Y: 3999998
       - X: -1999999
         Y: 3999998
-  - m_Collider: {fileID: 3994627659201807294}
+  - m_Collider: {fileID: 4316583286048183998}
     m_ColliderPaths:
-    - - X: 5000003
-        Y: 4999998
-      - X: 2000003
-        Y: 4999998
-      - X: 2000003
-        Y: 3999998
-      - X: 5000003
-        Y: 3999998
+    - - X: -3999998
+        Y: -1999999
+      - X: -4999998
+        Y: -1999999
+      - X: -4999998
+        Y: -4999999
+      - X: -3999998
+        Y: -4999999
   - m_Collider: {fileID: 7032993644151504832}
     m_ColliderPaths:
     - - X: -1999999
@@ -1211,6 +1211,26 @@ CompositeCollider2D:
         Y: -4999998
       - X: -1999999
         Y: -4999998
+  - m_Collider: {fileID: 5054840054912692149}
+    m_ColliderPaths:
+    - - X: 4999998
+        Y: 5000003
+      - X: 3999998
+        Y: 5000003
+      - X: 3999998
+        Y: 2000003
+      - X: 4999998
+        Y: 2000003
+  - m_Collider: {fileID: 3994627659201807294}
+    m_ColliderPaths:
+    - - X: 5000003
+        Y: 4999998
+      - X: 2000003
+        Y: 4999998
+      - X: 2000003
+        Y: 3999998
+      - X: 5000003
+        Y: 3999998
   - m_Collider: {fileID: 3619177053462475472}
     m_ColliderPaths:
     - - X: 5000003
@@ -1230,26 +1250,6 @@ CompositeCollider2D:
       - X: -4999998
         Y: 2000003
       - X: -3999998
-        Y: 2000003
-  - m_Collider: {fileID: 4316583286048183998}
-    m_ColliderPaths:
-    - - X: -3999998
-        Y: -1999999
-      - X: -4999998
-        Y: -1999999
-      - X: -4999998
-        Y: -4999999
-      - X: -3999998
-        Y: -4999999
-  - m_Collider: {fileID: 5054840054912692149}
-    m_ColliderPaths:
-    - - X: 4999998
-        Y: 5000003
-      - X: 3999998
-        Y: 5000003
-      - X: 3999998
-        Y: 2000003
-      - X: 4999998
         Y: 2000003
   - m_Collider: {fileID: 734475069677119857}
     m_ColliderPaths:
