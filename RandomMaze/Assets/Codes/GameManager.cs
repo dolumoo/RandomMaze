@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         SpawnModule.SpawnMaze();
-        MazeSolver.ValidMaze();
+        //MazeSolver.ValidMaze();
 
 
 
