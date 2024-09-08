@@ -11,5 +11,11 @@ public class Player : MonoBehaviour
             GameManager.Instance.ChangeClearScene();
             Debug.Log("Goal!");
         }
+        else if (col.CompareTag("Enemy"))
+        {
+            GameManager.Instance.ChangeFailScene();
+            Debug.Log("Fail!");
+        }
+
     }
 }

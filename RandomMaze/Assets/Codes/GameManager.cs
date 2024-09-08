@@ -19,21 +19,18 @@ public class GameManager : MonoBehaviour
     public SpawnModule SpawnModule;
     public MazeSolver MazeSolver;
     public UImanager UImanager;
+    public SpawnEnemy SpawnEnemy;
 
     private void Awake()
     {
         setGoal();
-
+        Time.timeScale = 1;
 
         Instance = this;
     }
 
     private void Start()
     {
-        //SpawnModule.SpawnMaze();
-        //MazeSolver.ValidMaze();
-
-
         StartCoroutine(GenerateMaze());
     }
 
@@ -41,8 +38,12 @@ public class GameManager : MonoBehaviour
     {
         UImanager.PlayerReachedGoal();
     }
+    public void ChangeFailScene()
+    {
+        UImanager.PlayerFailedGoal();
+    }
 
-    
+
     IEnumerator GenerateMaze()
     {
         while (true)
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
 
             if (MazeSolver.ValidMaze())
             {
+                SpawnEnemy.spawnEnemy();
                 UImanager.endLoading();
                 break;
             }

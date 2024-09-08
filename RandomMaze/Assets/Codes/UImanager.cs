@@ -7,6 +7,7 @@ public class UImanager : MonoBehaviour
 {
     public GameObject victoryUI;
     public GameObject loadingUI;
+    public GameObject failUI;
 
     private void Start()
     {
@@ -20,7 +21,13 @@ public class UImanager : MonoBehaviour
     }
     public void PlayerReachedGoal()
     {
+        Time.timeScale = 0;
         victoryUI.SetActive(true);
+    }
+    public void PlayerFailedGoal()
+    {
+        Time.timeScale = 0;
+        failUI.SetActive(true);
     }
 
     public void RestartGame()
